@@ -13,6 +13,7 @@ const ProductReducer = (state, action) => {
                 products: action.payload,
                 featureProducts: featureProducts,
             };
+            
         case "API_ERROR":
             return {
                 ...state,

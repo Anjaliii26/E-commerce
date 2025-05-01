@@ -46,9 +46,6 @@ export const AddToCart = ({ product }) => {
 <NavLink to={`/cart`} className="block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 text-center">
   <button>Add to Cart </button>
 </NavLink>
-     
-
-
     </div>
   );
 };

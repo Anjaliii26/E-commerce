@@ -34,8 +34,7 @@ const AppProvider = ({ children }) => {
             dispatch({type : "API_ERROR"})
             console.log(error);
        }
-    }
-
+      }
     const getSingleProduct = async (id)=> {
         dispatch({type : "SET_SINGLE_LOADING"})
         try {
@@ -59,8 +58,6 @@ const AppProvider = ({ children }) => {
 }
 
 //custom hook
-
-
 const useGlobalContext = () => {
   return useContext(AppContext);
 }
