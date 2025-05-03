@@ -3,7 +3,7 @@ import { useFilterContext } from '../context/filterContext';
 import { FaTh, FaList } from 'react-icons/fa';
 
 export const Sort = () => {
-  const { setGridView, setListView, gridView,FilteredProducts } = useFilterContext();
+  const { setGridView, setListView, gridView,FilteredProducts, sorting } = useFilterContext();
 
   return (
     <div className="flex items-center justify-between mb-4">
@@ -26,7 +26,7 @@ export const Sort = () => {
 
       <form>
         <label htmlFor='sort'>Sort by </label>
-        <select name='sort' id='sort'>
+        <select name='sort' id='sort' onClick={sorting}>
           <option value='lowest'>Price (Lowest)</option>
           <option value='highest'>Price (Highest)</option>
           <option value='a-z'>Name (A-Z)</option>

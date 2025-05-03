@@ -18,6 +18,15 @@ const filterReducer = (state, action) => {
           ...state,
           gridView: false,
         };
+        case "GET_SORT_VALUE":
+
+        let userValue = document.getElementById("sort").value;
+        let sort_value=userValue.options[userValue.selectedIndex].value
+        return{
+          ...state,
+          sorting_value: sort_value
+        }
+
   
       default:
         return state;
