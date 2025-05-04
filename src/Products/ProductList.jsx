@@ -4,14 +4,14 @@ import { GridView } from './GridView'
 import { ListView } from './ListView';
 
 export const ProductList = () => {
-  const { FilteredProducts, gridView } = useFilterContext();
+  const { filteredProducts, gridView } = useFilterContext();
 
   if (gridView === true) {
-    return <GridView products={FilteredProducts} />;
+    return <GridView products={filteredProducts} />;
   }
 
   if (gridView === false) {
-    return <ListView products={FilteredProducts} />;
+    return <ListView products={filteredProducts} />;
   }
   
   // if (setGridView===false){
