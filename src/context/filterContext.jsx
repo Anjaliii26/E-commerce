@@ -15,8 +15,8 @@ const initialState = {
     company: "all",
     color: "all",
     price: 0,
-    min_price: 0,
-    max_price: 0,
+    maxPrice: 0,
+    minPrice: 0,
   },
 };
 
@@ -42,6 +42,11 @@ export const FilterProvider = ({ children }) => {
     dispatch({ type: "UPDATE_FILTERS", payload: { name, value } });
   };
 
+  //to clear all filters
+  const clearFilters = () => {
+    dispatch({ type: "CLEAR_FILTERS" });
+  };
+
   useEffect(() => {
     dispatch({ type: "FILTER_PRODUCTS" });
     dispatch({ type: "SORTING_PRODUCTS" });
@@ -59,6 +64,7 @@ export const FilterProvider = ({ children }) => {
         setListView,
         sorting,
         updateFilter,
+        clearFilters,
       }}
     >
       {children}

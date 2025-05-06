@@ -1,12 +1,22 @@
 const filterReducer = (state, action) => {
   switch (action.type) {
     case "LOAD_FILTER_PRODUCTS":
-      // You could also initialize min/max price here if needed
-      return {
-        ...state,
-        allProducts: [...action.payload],
-        filteredProducts: [...action.payload],
-      };
+  let priceArr = action.payload.map((product) => product.price);
+  let maxPrice = Math.max(...priceArr);
+  let minPrice = Math.min(...priceArr);
+
+  return {
+    ...state,
+    allProducts: [...action.payload],
+    filteredProducts: [...action.payload],
+    filters: {
+      ...state.filters,
+      maxPrice: maxPrice,
+      minPrice: minPrice,
+      price: maxPrice,
+    },
+  };
+
 
     case "SET_GRIDVIEW":
       return {
@@ -25,6 +35,7 @@ const filterReducer = (state, action) => {
         ...state,
         sorting_value: action.payload,
       };
+
 
     case "SORTING_PRODUCTS":
       let newSortedProducts = [...state.filteredProducts];
@@ -86,6 +97,21 @@ const filterReducer = (state, action) => {
         ...state,
         filteredProducts: tempProducts,
       };
+
+      case "CLEAR_FILTERS":
+        return {
+          ...state,
+          filters: {
+            ...state.filters,
+            text: "",
+            category: "all",
+            company: "all",
+            color: "all",
+            price: state.filters.maxPrice,
+            maxPrice: state.filters.maxPrice,
+            minPrice: state.filters.minPrice,
+          },
+        };
 
     default:
       return state;
