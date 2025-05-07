@@ -43,9 +43,13 @@ export const AddToCart = ({ product }) => {
 />
 
 
-<NavLink to={`/cart`} className="block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 text-center">
-  <button>Add to Cart </button>
-</NavLink>
+      <NavLink
+        to="/cart"
+        onClick={() => addToCart(id, selectedColor, amount, product)}
+        className="block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 text-center"
+      >
+        <button>Add to Cart</button>
+      </NavLink>
     </div>
   );
 };
