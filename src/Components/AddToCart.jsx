@@ -42,7 +42,6 @@ export const AddToCart = ({ product }) => {
   setIncrease={setIncrease}
 />
 
-
       <NavLink
         to="/cart"
         onClick={() => addToCart(id, selectedColor, amount, product)}
