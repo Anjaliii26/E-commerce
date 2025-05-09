@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import { CartAmount } from './CartAmount';
 import { NavLink } from 'react-router-dom';
+import { useCartContext } from '../context/cartContext';
 
 export const AddToCart = ({ product }) => {
+  const { addToCart } = useCartContext();
   const { id, colors, stock } = product;
   const [selectedColor, setSelectedColor] = useState(colors[0]);
     const [amount, setAmount] = useState(1);
