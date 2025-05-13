@@ -1,7 +1,17 @@
 import React from 'react';
 import { FaTrash } from 'react-icons/fa';
+import { CartAmount } from './CartAmount';
+import { useCartContext } from '../context/cartContext';
 
 export const CartItem = ({ id, name, image, color, price, amount }) => {
+    const { removeItem } = useCartContext(); 
+   const setDecrease = () => {
+    amount>1 ? setAmount(amount-1) : setAmount(1)
+  }
+   const setIncrease = () => {
+    amount<stock ? setAmount(amount+1) : setAmount(stock)
+  }
+
   return (
     <div className='grid grid-cols-5 gap-4 items-center border-b py-4'>
       <div className="flex items-center gap-4">
@@ -16,10 +26,16 @@ export const CartItem = ({ id, name, image, color, price, amount }) => {
       </div>
 
       <p>₹{price}</p>
-      <p>{amount}</p>
+      <div>
+         <CartAmount
+          amount={amount}
+          setDecrease={setDecrease}
+          setIncrease={setIncrease}
+        />
+      </div>
       <p>₹{price * amount}</p>
       <button>
-        <FaTrash />
+        <FaTrash  onClick={()=> removeItem(id)} />
       </button>
     </div>
   );

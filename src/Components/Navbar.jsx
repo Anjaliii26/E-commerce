@@ -25,14 +25,14 @@ export const Navbar = () => {
         <NavLink to="/cart" className="relative flex items-center gap-1 hover:text-blue-600">
           <FiShoppingCart className="text-xl" />
           <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-            0
+            
           </span>
           Cart
         </NavLink>
 
         <NavLink to="/checkout" className="hover:text-blue-600">Checkout</NavLink>
-        <NavLink to="/orders" className="hover:text-blue-600">Orders</NavLink>
-        <NavLink to="/profile" className="hover:text-blue-600">Profile</NavLink>
+        {/* <NavLink to="/orders" className="hover:text-blue-600">Orders</NavLink>
+        <NavLink to="/profile" className="hover:text-blue-600">Profile</NavLink> */}
       </div>
     </nav>
   )
