@@ -7,10 +7,11 @@ export const Header = () => {
     <header className="flex items-center justify-between px-6  bg-white shadow-md">
       <NavLink to="/" className="flex items-center">
         <img
-          src="/images/logo.png"
-          alt="Logo"
-          className="h-20 w-auto "
-        />
+  src={`${import.meta.env.BASE_URL}images/logo.png`}
+  alt="Logo"
+  className="h-20 w-auto "
+/>
+
       </NavLink>
       <Navbar />
     </header>

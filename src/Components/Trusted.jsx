@@ -9,22 +9,22 @@ export const Trusted = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-20 px-10 justify-items-center">
         <img
-          src="/images/comp1.png"
+          src={`${import.meta.env.BASE_URL}images/comp1.png`}
           alt="Brand 1"
           className="w-20 h-20 object-contain transition duration-300"
         />
         <img
-          src="/images/comp2.png"
+          src={`${import.meta.env.BASE_URL}images/comp2.png`}
           alt="Brand 2"
           className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
         />
         <img
-          src="/images/comp3.png"
+          src={`${import.meta.env.BASE_URL}images/comp3.png`}
           alt="Brand 3"
           className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
         />
         <img
-          src="/images/comp2.png"
+          src={`${import.meta.env.BASE_URL}images/comp2.png`}
           alt="Brand 4"
           className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
         />

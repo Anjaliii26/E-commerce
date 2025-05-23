@@ -25,11 +25,12 @@ export const HeroSection = ({myData}) => {
 
       <div className="flex justify-center">
         <figure>
-          <img
-            src="/images/hero.png"
-            alt="hero"
-            className="w-full max-w-md rounded-xl shadow-lg object-cover"
-          />
+         <img
+  src={`${import.meta.env.BASE_URL}images/hero.png`}
+  alt="hero"
+  className="w-full max-w-md rounded-xl shadow-lg object-cover"
+/>
+
         </figure>
       </div>
     </div>
