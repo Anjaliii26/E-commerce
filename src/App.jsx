@@ -10,12 +10,12 @@ import { Cart } from './Components/Cart'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/E-commerce">
   <Header />
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
-    <Route path="/products" element={<Products/>} />
+    <Route path="/products" element={<Products />} />
     <Route path="/singleproduct/:id" element={<SingleProduct />} />
     <Route path="/cart" element={<Cart />} />
     <Route path="/checkout" element={<h1>Checkout</h1>} />
@@ -23,6 +23,7 @@ function App() {
     <Route path="/profile" element={<h1>Profile</h1>} />
   </Routes>
 </BrowserRouter>
+
 
     </>
   )
