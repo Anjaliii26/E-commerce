@@ -30,7 +30,7 @@ export const Navbar = () => {
           Cart
         </NavLink>
 
-        <NavLink to="/checkout" className="hover:text-blue-600">Checkout</NavLink>
+        {/* <NavLink to="/checkout" className="hover:text-blue-600">Checkout</NavLink> */}
         {/* <NavLink to="/orders" className="hover:text-blue-600">Orders</NavLink>
         <NavLink to="/profile" className="hover:text-blue-600">Profile</NavLink> */}
       </div>
